@@ -173,7 +173,7 @@ body {
     color: white;
 
     .instriction {
-      width: 30rem;
+      max-width: 30rem;
       color: #ababab;
       font-family: Roboto;
       font-size: 1.2rem;
@@ -240,8 +240,9 @@ body {
       display: flex;
       flex-direction: column;
       gap: 2rem;
-      min-height:435px ;
-      transition: .3s ease-in;
+      min-height: 435px;
+      transition: 0.3s ease-in;
+
       h4 {
         font-size: 2.25rem;
         font-style: normal;
@@ -268,31 +269,111 @@ body {
         line-height: 180%;
       }
 
-      &:hover{
+      &:hover {
         background-color: $secondery;
         color: #141c24;
 
-        p{
+        p {
           color: #141c24;
         }
-        button{
+        button {
           background-color: #141c24;
           color: white;
         }
-        
       }
     }
-
-
   }
 }
 
+.example {
+  position: relative;
+  margin: 6rem 0;
+  height: 50rem;
+
+  .example-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    width: 60ch;
+    p {
+      color: #ababab;
+      font-size: 1.33313rem;
+      font-weight: 300;
+      line-height: 150%;
+    }
+  }
+
+  .example-img img {
+    position: absolute;
+    right: 0;
+    &:first-of-type {
+      top: 18rem;
+    }
+    &:nth-of-type(2) {
+      top: 20px;
+      z-index: 2;
+    }
+    &:last-of-type {
+      z-index: 0;
+    }
+  }
+}
+
+footer {
+  font-size: 0.75rem;
+  background-color: #171717;
+  padding: 1rem 7rem;
+
+  .navbar-text{
+    color: #838383;
+  }
+}
+
+
 @media (max-width: 991px) {
+  .instruction-items {
+    flex-wrap: wrap;
+    max-width: 500px;
+    gap: 0.5rem !important;
+    justify-content: space-evenly;
+    .instruction-item {
+      width: 10rem;
+    }
+    .line:nth-last-of-type(2) {
+      display: none;
+    }
+  }
   .navbar-nav {
+    transition: 0.3s ease;
     margin-top: 20px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    z-index: 30;
+    background-color: #141c24;
+    padding: 3rem 1rem 5rem 5rem;
+    border-radius: 1rem;
+    font-weight: bold;
     gap: 10px !important;
   }
-  .hero-text {
+  .hero-text .hero-text {
     transform: scale(0.7) !important;
+  }
+
+  .example {
+    height: inherit;
+    .container {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    img {
+      display: none;
+    }
+  }
+  .info {
+    flex-wrap: wrap !important;
   }
 }

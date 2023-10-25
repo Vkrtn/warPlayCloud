@@ -376,7 +376,7 @@ body {
   color: white;
 }
 .info .info-text .instriction {
-  width: 30rem;
+  max-width: 30rem;
   color: #ababab;
   font-family: Roboto;
   font-size: 1.2rem;
@@ -514,14 +514,107 @@ body {
   color: white;
 }
 
+.example {
+  position: relative;
+  margin: 6rem 0;
+  height: 50rem;
+}
+.example .example-text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+  width: 60ch;
+}
+.example .example-text p {
+  color: #ababab;
+  font-size: 1.33313rem;
+  font-weight: 300;
+  line-height: 150%;
+}
+.example .example-img img {
+  position: absolute;
+  right: 0;
+}
+.example .example-img img:first-of-type {
+  top: 18rem;
+}
+.example .example-img img:nth-of-type(2) {
+  top: 20px;
+  z-index: 2;
+}
+.example .example-img img:last-of-type {
+  z-index: 0;
+}
+
+footer {
+  font-size: 0.75rem;
+  background-color: #171717;
+  padding: 1rem 7rem;
+}
+footer .navbar-text {
+  color: #838383;
+}
+
 @media (max-width: 991px) {
+  .instruction-items {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 500px;
+    gap: 0.5rem !important;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  .instruction-items .instruction-item {
+    width: 10rem;
+  }
+  .instruction-items .line:nth-last-of-type(2) {
+    display: none;
+  }
   .navbar-nav {
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
     margin-top: 20px;
+    position: absolute;
+    right: 0;
+    text-align: right;
+    z-index: 30;
+    background-color: #141c24;
+    padding: 3rem 1rem 5rem 5rem;
+    border-radius: 1rem;
+    font-weight: bold;
     gap: 10px !important;
   }
-  .hero-text {
+  .hero-text .hero-text {
     -webkit-transform: scale(0.7) !important;
         -ms-transform: scale(0.7) !important;
             transform: scale(0.7) !important;
+  }
+  .example {
+    height: inherit;
+  }
+  .example .container {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .example img {
+    display: none;
+  }
+  .info {
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
   }
 }/*# sourceMappingURL=style.css.map */
